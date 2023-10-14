@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainMenue.unity
+    guid: 71678b1f23d80430b8c3121f6c618b2a
+  - enabled: 1
+    path: Assets/Scenes/zalupa.unity
+    guid: 62358eefdd80f1643a2970a15e1ad81a
   m_configObjects: {}

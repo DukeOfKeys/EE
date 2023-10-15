@@ -14,4 +14,9 @@ public class border : MonoBehaviour
             Enemy.aim = "Hero";
         }
     }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        print("Trigger Exited");
+            Enemy.aim = null;
+    }
 }

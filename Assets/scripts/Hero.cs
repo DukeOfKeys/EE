@@ -68,7 +68,15 @@ public class Hero : MonoBehaviour
         }
     }
 
-
+    public void TakeDamage()
+    {
+        lives -= Enemy.damage;
+        if (lives <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("борец с чурками отправился на покой");
+        }
+    }
     IEnumerator Reload()
     {
         while (stamina != 100 || reloadTime != timeBtwAttack)

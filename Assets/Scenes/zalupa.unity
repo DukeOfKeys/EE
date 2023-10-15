@@ -4686,7 +4686,7 @@ GameObject:
   - component: {fileID: 1960563401}
   m_Layer: 3
   m_Name: FirstEnemy
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4814,7 +4814,7 @@ Transform:
   m_GameObject: {fileID: 1960563396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.88, y: -1.55, z: -1}
+  m_LocalPosition: {x: 4.91, y: -1.23, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4835,6 +4835,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemylives: 5
   speed: 2
+  timeBtwAttack: 1
+  attackRange: 1.5
+  hero:
+    serializedVersion: 2
+    m_Bits: 64
+  reloadTime: 0.1
+  rb: {fileID: 1960563399}
 --- !u!1 &1968845448
 GameObject:
   m_ObjectHideFlags: 0

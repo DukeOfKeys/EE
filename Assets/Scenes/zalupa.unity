@@ -4989,7 +4989,7 @@ MonoBehaviour:
   target: {fileID: 1821140712}
   smoothing: 0.1
   maxPosition: {x: 16, y: 14.5}
-  minPosition: {x: -6, y: 0}
+  minPosition: {x: -6, y: -2}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ public class FollowScreept : MonoBehaviour
     {
         Vector3 targetPosition = new Vector3(target.position.x, target.position.y, transform.position.z);
         targetPosition.x = Mathf.Clamp(targetPosition.x, minPosition.x, maxPosition.x);
-        targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.x, maxPosition.y);
+        targetPosition.y = Mathf.Clamp(targetPosition.y, minPosition.y, maxPosition.y);
         if (transform.position != target.position) {
             transform.position = Vector3.Lerp(transform.position, targetPosition, smoothing);
         }

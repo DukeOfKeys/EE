@@ -8,7 +8,7 @@ public class ChangeLevel : MonoBehaviour
     // Start is called before the first frame update
     private void OnTriggerEnter2D(Collider2D other) {
         print ("Trigger Entered");
-        if(other.tag == "Player"){
+        if(other.tag == "Hero"){
             print("Switching Scene to " + sceneBuildIndex);
             SceneManager.LoadScene(sceneBuildIndex,LoadSceneMode.Single);
         }

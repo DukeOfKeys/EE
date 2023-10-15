@@ -7,15 +7,15 @@ public class Enemy : MonoBehaviour
 {
     Transform target;
     [SerializeField] int enemylives = 5;
-    [SerializeField] float speed = 5f;
-
-    void Start()
-    {
-        target = GameObject.FindGameObjectWithTag("Hero").GetComponent<Transform>();
-    }
+    [SerializeField] float speed = 2f;
+    [SerializeField] public static string aim = null;
 
     void FixedUpdate()
     {
-        transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime); 
+        if (aim != null)
+        {
+            target = GameObject.FindGameObjectWithTag(aim).GetComponent<Transform>();
+            transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
+        }
     }
 }

@@ -9,10 +9,6 @@ public class Menu : MonoBehaviour
     SceneManager.LoadScene(1);
     }
     public void OnQuitbutton(){
-#if UNITY_EDITOR
-            EditorApplication.isPlaying = false;
-#else
-Application Quit();
-#endif
+Application.Quit();
     }
 }

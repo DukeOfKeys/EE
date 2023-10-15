@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/zalupa.unity
     guid: 62358eefdd80f1643a2970a15e1ad81a
+  - enabled: 1
+    path: Assets/Scenes/Corridor.unity
+    guid: 2e21d86faddfc41ccb878a1aca3d31c0
   m_configObjects: {}

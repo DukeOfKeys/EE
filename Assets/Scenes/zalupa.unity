@@ -2635,7 +2635,7 @@ Transform:
   m_GameObject: {fileID: 1821140709}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.01, y: 2.05, z: -1}
+  m_LocalPosition: {x: -0.567, y: 2.05, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2681,6 +2681,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  stamina: 100
+  timeBtwAttack: 0.7
+  attackRange: 1
+  enemy:
+    serializedVersion: 2
+    m_Bits: 8
+  attackPos: {fileID: 1821140712}
+  reloadTime: 0.1
+  tempSpeed: 0
+  rb: {fileID: 1821140713}
+  movementDirection: {x: 0, y: 0}
 --- !u!61 &1821140715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2739,7 +2750,7 @@ GameObject:
   - component: {fileID: 1960563398}
   - component: {fileID: 1960563397}
   - component: {fileID: 1960563401}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: FirstEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

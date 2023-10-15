@@ -18,4 +18,14 @@ public class Enemy : MonoBehaviour
             transform.position = Vector2.MoveTowards(transform.position, target.position, speed * Time.fixedDeltaTime);
         }
     }
+
+    public void TakeDamage()
+    {
+        enemylives -= Hero.damage;
+        if (enemylives <= 0)
+        {
+            Destroy(gameObject);
+            Debug.Log("Чурка сдохла");
+        }
+    }
 }

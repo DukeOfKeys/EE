@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
@@ -8,6 +9,10 @@ public class Menu : MonoBehaviour
     SceneManager.LoadScene(1);
     }
     public void OnQuitbutton(){
-        Application.Quit();
+#if UNITY_EDITOR
+            EditorApplication.isPlaying = false;
+#else
+Application Quit();
+#endif
     }
 }

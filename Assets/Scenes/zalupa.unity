@@ -4501,7 +4501,7 @@ GameObject:
   - component: {fileID: 1821140713}
   - component: {fileID: 1821140714}
   - component: {fileID: 1821140715}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hero
   m_TagString: Hero
   m_Icon: {fileID: 0}
@@ -4615,6 +4615,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
+  lives: 5
   stamina: 100
   timeBtwAttack: 0.7
   attackRange: 1
@@ -4835,7 +4836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemylives: 5
   speed: 2
-  timeBtwAttack: 1
+  timeBtwAttack: 2
   attackRange: 1.5
   hero:
     serializedVersion: 2

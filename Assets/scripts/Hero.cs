@@ -7,7 +7,7 @@ using System;
 public class Hero : MonoBehaviour
 {
     [SerializeField] public float moveSpeed = 5f;
-    [SerializeField] public static byte lives = 5;
+    [SerializeField] public byte lives = 5;
     [SerializeField] public static byte damage = 1;
     [SerializeField] public float stamina = 100f;
     [SerializeField] public float timeBtwAttack = 0.7f;

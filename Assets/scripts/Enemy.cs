@@ -7,13 +7,12 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 public class Enemy : MonoBehaviour
 {
-    private Transform target;
-    private readonly Transform enemy;
+    private Transform target, enemy;
     [SerializeField] int enemylives = 5;
     [SerializeField] float speed = 2f;
     [SerializeField] public static string aim = null;
     [SerializeField] private float timeBtwAttack = 1f;
-    [SerializeField] public float attackRange = 5f;
+    [SerializeField] private float attackRange = 5f;
     [SerializeField] public static byte damage = 1;
     public LayerMask hero;
     public float reloadTime = 0.1f;
@@ -25,6 +24,7 @@ public class Enemy : MonoBehaviour
         {
             Attack();
         }
+        enemy = GameObject.FindGameObjectWithTag("enemy").GetComponent<Transform>();
     }
     void FixedUpdate()
     {
@@ -65,4 +65,6 @@ public class Enemy : MonoBehaviour
             Debug.Log("Чурка сдохла");
         }
     }
+
+
 }

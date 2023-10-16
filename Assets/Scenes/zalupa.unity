@@ -359,6 +359,7 @@ GameObject:
   - component: {fileID: 578443178}
   - component: {fileID: 578443177}
   - component: {fileID: 578443176}
+  - component: {fileID: 578443179}
   m_Layer: 0
   m_Name: TilemapWalls
   m_TagString: Untagged
@@ -1868,6 +1869,33 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!50 &578443179
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 578443174}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
 --- !u!1 &884731128
 GameObject:
   m_ObjectHideFlags: 0
@@ -4614,7 +4642,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85959b8c653a6104fb70fa90f01288ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
+  moveSpeed: 1000
   lives: 5
   stamina: 100
   timeBtwAttack: 0.7
@@ -4835,7 +4863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemylives: 5
-  speed: 2
+  speed: 1000
   timeBtwAttack: 2
   attackRange: 1.5
   hero:

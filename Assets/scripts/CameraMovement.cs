@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowScreept : MonoBehaviour
+public class CameraMovement : MonoBehaviour
 {
     public Transform target;
     public float smoothing;

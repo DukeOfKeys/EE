@@ -88,7 +88,7 @@ public class Hero : MonoBehaviour
             yield return new WaitForSeconds(20);
         }
     }
-
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

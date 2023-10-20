@@ -5680,7 +5680,7 @@ Transform:
   m_GameObject: {fileID: 761475360}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.312253, y: 5.19851, z: 19.053133}
+  m_LocalPosition: {x: 268.28, y: 258.99, z: 19.053133}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16825,7 +16825,7 @@ Transform:
   m_GameObject: {fileID: 951712701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.51, y: 2.62, z: -1}
+  m_LocalPosition: {x: 264.08224, y: 256.4115, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -32495,7 +32495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Animation: StartOpen
-  obj: {fileID: 0}
   dialogueText: {fileID: 1727182734}
   nameText: {fileID: 294476213}
   boxAnim: {fileID: 558113777}
@@ -33113,7 +33112,7 @@ Transform:
   m_GameObject: {fileID: 1821140709}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.567, y: 2.05, z: -1}
+  m_LocalPosition: {x: 263.37, y: 265.39, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33404,7 +33403,7 @@ Transform:
   m_GameObject: {fileID: 1960563396}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.91, y: -1.23, z: -1}
+  m_LocalPosition: {x: 263.00702, y: 248.95, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -33577,7 +33576,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 5.1803703
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -33601,8 +33600,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1979058420}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 22.1, y: 36.9, z: -10}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 264.2, y: 257.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33801,9 +33800,9 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1461886769}
-  - {fileID: 1979058423}
   - {fileID: 1968845450}
   - {fileID: 1821140712}
+  - {fileID: 1979058423}
   - {fileID: 1294594844}
   - {fileID: 380795826}
   - {fileID: 1960563400}

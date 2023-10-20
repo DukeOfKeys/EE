@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
+    public string Animation;   
+    
     public Text dialogueText;
     public Text nameText;
 
@@ -15,13 +17,13 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
-        sentences = new Queue<string>();
+        sentences = new Queue<string>();       
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
         boxAnim.SetBool("BoxOpen", true);
-        startAnim.SetBool("StartOpen", false);
+        startAnim.SetBool(Animation, false); 
         nameText.text = dialogue.name;
         sentences.Clear();
 

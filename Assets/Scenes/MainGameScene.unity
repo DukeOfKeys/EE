@@ -7007,7 +7007,7 @@ Transform:
   m_GameObject: {fileID: 951712701}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.51, y: 2.47, z: -1}
+  m_LocalPosition: {x: -8.51, y: 2.62, z: -1}
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7026,6 +7026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b7e5eb5329cf904f942f3724ec883f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animation: StartOpen
   startAnim: {fileID: 2020792608}
   dm: {fileID: 1461886768}
 --- !u!1 &964083699
@@ -7681,6 +7682,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c453ba111e1dc7a4abd8c8bd19a1b251, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Animation: StartOpen
+  obj: {fileID: 0}
   dialogueText: {fileID: 1727182734}
   nameText: {fileID: 294476213}
   boxAnim: {fileID: 558113777}

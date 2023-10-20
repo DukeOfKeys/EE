@@ -14,7 +14,7 @@ public class Friends : MonoBehaviour
             Dialog();
         }
     }
-
+    
     private void Dialog()
     {
         Debug.Log("Здравствуй, Чуркаборец!!! Я тебе поведаю легенду о древнерруских боях гимназистов с ящерами треклятыми!!!!!!");

@@ -4,16 +4,17 @@ using UnityEngine;
 using System;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using UnityEngine.UIElements;
 
 public class Saves : MonoBehaviour
 {
     int intToSave;
     float floatToSave;
     bool boolToSave;
-    public Rigidbody2D posToSave;
+    public Transform posToSave;
     void Start()
     {
-        posToSave =  GameObject.FindWithTag("Hero").GetComponent<Rigidbody2D>();
+        posToSave =  GameObject.FindWithTag("Hero").GetComponent<Transform>();
     }
     public void SaveGame()
     {
@@ -62,11 +63,10 @@ public class Saves : MonoBehaviour
     }
 }
 
-[Serializable]
-class SaveData
+[Serializable] class SaveData
 {
     public int savedInt;
     public float savedFloat;
     public bool savedBool;
-    public Rigidbody2D playerPos;
+    public Transform playerPos;
 }

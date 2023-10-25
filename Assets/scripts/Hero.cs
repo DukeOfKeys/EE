@@ -16,7 +16,6 @@ public class Hero : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         tempSpeed = moveSpeed;
- 
     }
 
     void Update()

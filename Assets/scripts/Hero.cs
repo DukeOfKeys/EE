@@ -6,11 +6,13 @@ using System;
 
 public class Hero : MonoBehaviour
 {
-    [SerializeField] public float moveSpeed = 5f;
-    public float tempSpeed;
-    public Rigidbody2D rb;
-    public Vector2 movementDirection;
-
+    [SerializeField]private float moveSpeed = 5f;
+    private float tempSpeed;
+    [SerializeField]protected Rigidbody2D rb;
+    private Vector2 movementDirection;
+    [SerializeField]protected Transform playerPos;
+    protected float x;
+    protected float y;
 
     void Start()
     {
@@ -21,6 +23,8 @@ public class Hero : MonoBehaviour
     void Update()
     {
         MoveContraller();
+        x = playerPos.transform.position.x;
+        y = playerPos.transform.position.y;
     }
 
     void FixedUpdate()

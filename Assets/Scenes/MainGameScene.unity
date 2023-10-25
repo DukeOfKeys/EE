@@ -5765,7 +5765,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Reset Save
+  m_text: Load Save
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6004,9 +6004,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1146635874}
+      - m_Target: {fileID: 1979058425}
         m_TargetAssemblyTypeName: Saves, Assembly-CSharp
-        m_MethodName: SaveGame
+        m_MethodName: Save
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -17279,7 +17279,6 @@ GameObject:
   - component: {fileID: 1146635869}
   - component: {fileID: 1146635868}
   - component: {fileID: 1146635873}
-  - component: {fileID: 1146635874}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -17399,19 +17398,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PopUpMenue: {fileID: 1916254579}
   GameIsPaused: 0
---- !u!114 &1146635874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1146635867}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86c8fa472f3d4fb4d8ede4f8317595c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posToSave: {fileID: 0}
 --- !u!1 &1294594841
 GameObject:
   m_ObjectHideFlags: 0
@@ -32979,10 +32965,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85959b8c653a6104fb70fa90f01288ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 10
-  tempSpeed: 0
-  rb: {fileID: 1821140713}
-  movementDirection: {x: 0, y: 0}
+  moveSpeed: 5
+  rb: {fileID: 0}
+  playerPos: {fileID: 1821140712}
 --- !u!61 &1821140715
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -33409,6 +33394,7 @@ GameObject:
   - component: {fileID: 1979058422}
   - component: {fileID: 1979058421}
   - component: {fileID: 1979058424}
+  - component: {fileID: 1979058425}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -33506,6 +33492,21 @@ MonoBehaviour:
   smoothing: 0.1
   maxPosition: {x: 10000, y: 10000}
   minPosition: {x: -10000, y: -10000}
+--- !u!114 &1979058425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1979058420}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86c8fa472f3d4fb4d8ede4f8317595c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  rb: {fileID: 1821140713}
+  playerPos: {fileID: 1821140712}
 --- !u!1 &2082497420
 GameObject:
   m_ObjectHideFlags: 0
@@ -33519,7 +33520,7 @@ GameObject:
   - component: {fileID: 2082497423}
   - component: {fileID: 2082497422}
   m_Layer: 5
-  m_Name: Reset Save
+  m_Name: Load Save
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -33589,9 +33590,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1146635874}
+      - m_Target: {fileID: 1979058425}
         m_TargetAssemblyTypeName: Saves, Assembly-CSharp
-        m_MethodName: ResetData
+        m_MethodName: Load
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

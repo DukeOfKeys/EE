@@ -1,28 +1,71 @@
 using UnityEngine;
 using System;
-using System.Diagnostics;
-
+using System.Runtime.Serialization.Formatters.Binary;
+using System.IO;
 
 public class Saves : Hero
 {
+    private void Update()
+    { 
 
+    }
     public void Save()
     {
-        PlayerPrefs.SetFloat("Save [X]", x);
-        PlayerPrefs.SetFloat("Save [Y]", y);
+        BinaryFormatter bf = new BinaryFormatter();
+        FileStream file = File.Create(Application.persistentDataPath + "/DataSaves.dat");
+        SaveData data = new SaveData();
 
-        PlayerPrefs.Save();
-        print("ей");
+        data.posX = x;
+        data.posY = y;
+        bf.Serialize(file, data);
+        file.Close();
+        Debug.Log("Game data saved!");
+        print($" {data.posX},  {data.posX}");
     }
 
     public void Load()
     {
-        if (PlayerPrefs.HasKey("Save [X]") && PlayerPrefs.HasKey("Save [Y]"))
+        if (File.Exists(Application.persistentDataPath + "/DataSaves.dat"))
         {
-            x = PlayerPrefs.GetFloat("Save [X]");
-            y = PlayerPrefs.GetFloat("Save [Y]");
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.persistentDataPath + "/DataSaves.dat", FileMode.Open);
+            SaveData data = (SaveData)bf.Deserialize(file);
+            file.Close();
+            x = data.posX;
+            y = data.posY;
+            Debug.Log("Game data loaded!");
+            print($" {data.posX},  {data.posX}");
+        }
+        else
+        {
+            x = 263.37f;
+            y = 263.37f;
+            Debug.Log("There is no save data!");
         }
 
-        playerPos.transform.position = new Vector2(x, y);    
+        teleportOnPos();    
     }
+
+    public void teleportOnPos()
+    {
+        playerPos.transform.position = new Vector2(x, y);
+    }
+
+    public void ResetData()
+    {
+        if (File.Exists(Application.persistentDataPath + "/DataSaves.dat"))
+        {
+            File.Delete(Application.persistentDataPath + "/DataSaves.dat");
+            Debug.Log("Data reset complete!");
+        }
+        else
+            Debug.Log("No save data to delete.");
+    }
+}
+
+[Serializable]
+class SaveData
+{
+    public float posX;
+    public float posY;
 }

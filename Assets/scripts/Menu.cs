@@ -16,4 +16,14 @@ public class Menu : MonoBehaviour
     {
         Application.Quit();
     }
+    public void OnNewGameButton()
+    {
+        if (File.Exists(Application.persistentDataPath + "/DataSaves.dat"))
+        {
+            File.Delete(Application.persistentDataPath + "/DataSaves.dat");
+            Debug.Log("Data reset complete!");
+        }
+        else
+            Debug.Log("No save data to delete.");
+    }
 }

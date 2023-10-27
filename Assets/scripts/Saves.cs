@@ -5,16 +5,11 @@ using System.IO;
 
 public class Saves : Hero
 {
-    private void Update()
-    { 
-
-    }
     public void Save()
     {
         BinaryFormatter bf = new BinaryFormatter();
         FileStream file = File.Create(Application.persistentDataPath + "/DataSaves.dat");
         SaveData data = new SaveData();
-
         data.posX = x;
         data.posY = y;
         bf.Serialize(file, data);
@@ -23,6 +18,10 @@ public class Saves : Hero
         print($" {data.posX},  {data.posX}");
     }
 
+    void Start()
+    {
+        Load();
+    }
     public void Load()
     {
         if (File.Exists(Application.persistentDataPath + "/DataSaves.dat"))
@@ -69,3 +68,4 @@ class SaveData
     public float posX;
     public float posY;
 }
+

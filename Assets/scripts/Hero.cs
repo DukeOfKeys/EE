@@ -11,8 +11,7 @@ public class Hero : MonoBehaviour
     [SerializeField]protected Rigidbody2D rb;
     private Vector2 movementDirection;
     [SerializeField]protected Transform playerPos;
-    protected float x;
-    protected float y;
+    [SerializeField]public float x, y;
 
     void Start()
     {

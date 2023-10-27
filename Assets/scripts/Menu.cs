@@ -8,6 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
+    public GameObject LoadButton;
     public void OnPlayButton()
     {
         SceneManager.LoadScene(1);
@@ -25,5 +26,11 @@ public class Menu : MonoBehaviour
         }
         else
             Debug.Log("No save data to delete.");
+    }
+
+    private void Update()
+    {
+        if (File.Exists(Application.persistentDataPath + "/DataSaves.dat")) LoadButton.SetActive(true);
+        else LoadButton.SetActive(false);
     }
 }

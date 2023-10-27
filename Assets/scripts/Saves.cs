@@ -60,6 +60,20 @@ public class Saves : Hero
         else
             Debug.Log("No save data to delete.");
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        print("Trigger Entered");
+        if (other.tag == "Hero")
+        {
+            Friends.bff = "Hero";
+            Save();
+        }
+    }
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        print("Trigger Exited");
+        Friends.bff = null;
+    }
 }
 
 [Serializable]

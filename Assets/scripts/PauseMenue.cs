@@ -16,7 +16,7 @@ public class PauseMenue : MonoBehaviour
         }
 
     }
-    public void Resume()
+    [SerializeField] public void Resume()
     {
         Time.timeScale = 1f;
         GameIsPaused = false;

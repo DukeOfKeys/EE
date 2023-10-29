@@ -10,11 +10,13 @@ public class Hero : MonoBehaviour
     private float tempSpeed;
     [SerializeField]protected Rigidbody2D rb;
     private Vector2 movementDirection;
+    private Animator anim;
     [SerializeField]protected Transform playerPos;
     [SerializeField]public float x, y;
 
     void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         tempSpeed = moveSpeed;
     }
@@ -39,6 +41,8 @@ public class Hero : MonoBehaviour
         {
             tempSpeed = moveSpeed;
             tempSpeed = Convert.ToInt32(Convert.ToInt64(tempSpeed) / Math.Sqrt(2));
+            anim.SetFloat("moveX", movementDirection.x);
+            print("loldhsuij");
         }
         else
         {

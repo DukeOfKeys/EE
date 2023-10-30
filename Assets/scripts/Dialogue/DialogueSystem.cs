@@ -23,16 +23,17 @@ public class DialogueSystem : MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        foreach(char c in lines[index].ToCharArray())
+        foreach (char c in lines[index].ToCharArray())
         {
+            print(c);
             dialogueText.text += c;
-            yield return new WaitForSeconds(speedText);
+            yield return new WaitForSeconds(speedText); 
         }
     }
 
     private void nextLines()
     {
-        if(index< lines.Length-1)
+        if(index <= lines.Length)
         {
             index++;
             dialogueText.text = string.Empty;

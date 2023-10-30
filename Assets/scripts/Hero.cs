@@ -38,7 +38,7 @@ public class Hero : MonoBehaviour
         else if (movementDirection.x == 0 && movementDirection.y == 1) State = States.run_up;
         else if (movementDirection.x == -1 && movementDirection.y == 0) State = States.run_left;
         else if (movementDirection.x == 1 && movementDirection.y == 0) State = States.run_right;
-        else if (movementDirection.x == 0 && movementDirection.y == 0) State = States.run_right;
+        else if (movementDirection.x == 0 && movementDirection.y == 0) State = States.idle;
 
     }
 

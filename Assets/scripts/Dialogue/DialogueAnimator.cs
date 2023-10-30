@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DialogueAnimator : MonoBehaviour
 {
-    private int check;
+    private bool check;
     private void StartDialogue()
     {
         DialogueBox.SetActive(true);
@@ -13,11 +13,11 @@ public class DialogueAnimator : MonoBehaviour
     }
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) & check == 1 )
+        if (Input.GetKeyDown(KeyCode.Space) & check == true )
         {
             StartDialogueText.SetActive(false);
             StartDialogue();
-            check = 0;
+            check = false;
         }
     }
     private void Start()
@@ -30,7 +30,7 @@ public class DialogueAnimator : MonoBehaviour
     {
         if(collision.name == "hero")
         {
-            check = 1;
+            check = true;
             StartDialogueText.SetActive(true);                                                                                             
         }
     }

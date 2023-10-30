@@ -899,7 +899,7 @@ GameObject:
   m_Component:
   - component: {fileID: 355603452}
   - component: {fileID: 355603454}
-  - component: {fileID: 355603453}
+  - component: {fileID: 355603455}
   m_Layer: 7
   m_Name: Border
   m_TagString: Untagged
@@ -922,18 +922,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 951712706}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &355603453
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355603451}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a31bb81e77e43e40b1a46ec973e9fa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &355603454
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -969,6 +957,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.5
+--- !u!114 &355603455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355603451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e0b6ff9a126e5f4baa7c0854183e6dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartDialogueText: {fileID: 601745980}
+  DialogueBox: {fileID: 2108254684}
 --- !u!1 &380795823
 GameObject:
   m_ObjectHideFlags: 0
@@ -19723,7 +19725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86c8fa472f3d4fb4d8ede4f8317595c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
+  rb: {fileID: 1821140713}
   playerPos: {fileID: 1821140712}
   moveSpeed: 5
   x: 0
@@ -19882,7 +19884,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1146635868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36227,8 +36229,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85959b8c653a6104fb70fa90f01288ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rb: {fileID: 0}
-  playerPos: {fileID: 0}
+  rb: {fileID: 1821140713}
+  playerPos: {fileID: 1821140712}
   moveSpeed: 5
   x: 0
   y: 0

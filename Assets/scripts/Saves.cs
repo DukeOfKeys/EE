@@ -52,18 +52,6 @@ public class Saves : Hero
             File.Delete(Application.persistentDataPath + "/DataSaves.dat");
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.tag == "Hero")
-        {
-            Friends.bff = "Hero";
-            Save();
-        }
-    }
-    private void OnTriggerExit2D(Collider2D other)
-    {
-        Friends.bff = null;
-    }
 }
 
 [Serializable]

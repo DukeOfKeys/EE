@@ -22,10 +22,7 @@ public class Menu : MonoBehaviour
         if (File.Exists(Application.persistentDataPath + "/DataSaves.dat"))
         {
             File.Delete(Application.persistentDataPath + "/DataSaves.dat");
-            Debug.Log("Data reset complete!");
         }
-        else
-            Debug.Log("No save data to delete.");
     }
 
     private void Update()

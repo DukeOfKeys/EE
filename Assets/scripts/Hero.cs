@@ -6,7 +6,7 @@ using System;
 
 public class Hero : MonoBehaviour
 {
-    [SerializeField]private float moveSpeed = 5f;
+    [SerializeField]protected float moveSpeed = 5f;
     private float tempSpeed;
     [SerializeField]protected Rigidbody2D rb;
     private Vector2 movementDirection;
@@ -41,8 +41,6 @@ public class Hero : MonoBehaviour
         {
             tempSpeed = moveSpeed;
             tempSpeed = Convert.ToInt32(Convert.ToInt64(tempSpeed) / Math.Sqrt(2));
-            anim.SetFloat("moveX", movementDirection.x);
-            print("loldhsuij");
         }
         else
         {

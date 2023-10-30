@@ -14,8 +14,6 @@ public class Saves : Hero
         data.posY = y;
         bf.Serialize(file, data);
         file.Close();
-        Debug.Log("Game data saved!");
-        print($" {data.posX},  {data.posX}");
     }
 
     void Start()
@@ -32,14 +30,11 @@ public class Saves : Hero
             file.Close();
             x = data.posX;
             y = data.posY;
-            Debug.Log("Game data loaded!");
-            print($" {data.posX},  {data.posX}");
         }
         else
         {
             x = 263.37f;
             y = 263.37f;
-            Debug.Log("There is no save data!");
         }
 
         teleportOnPos();    
@@ -55,14 +50,10 @@ public class Saves : Hero
         if (File.Exists(Application.persistentDataPath + "/DataSaves.dat"))
         {
             File.Delete(Application.persistentDataPath + "/DataSaves.dat");
-            Debug.Log("Data reset complete!");
         }
-        else
-            Debug.Log("No save data to delete.");
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        print("Trigger Entered");
         if (other.tag == "Hero")
         {
             Friends.bff = "Hero";
@@ -71,7 +62,6 @@ public class Saves : Hero
     }
     private void OnTriggerExit2D(Collider2D other)
     {
-        print("Trigger Exited");
         Friends.bff = null;
     }
 }

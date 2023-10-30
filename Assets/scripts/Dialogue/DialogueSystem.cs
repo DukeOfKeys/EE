@@ -25,7 +25,6 @@ public class DialogueSystem : MonoBehaviour
     {
         foreach (char c in lines[index].ToCharArray())
         {
-            print(c);
             dialogueText.text += c;
             yield return new WaitForSeconds(speedText); 
         }
